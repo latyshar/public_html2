@@ -1,0 +1,437 @@
+{
+	"info": {
+		"_postman_id": "1c22db17-ecc2-4a71-bae5-16189687a070",
+		"name": "Cursovik",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20999915"
+	},
+	"item": [
+		{
+			"name": "Личный кабинет",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "heMGidbza94SmGeW8TuXnVQas25lWxAi",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "k-latisheva.xn--80ahdri7a.site/api/client",
+					"host": [
+						"k-latisheva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Записи",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "heMGidbza94SmGeW8TuXnVQas25lWxAi",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "k-latisheva.xn--80ahdri7a.site/api/register",
+					"host": [
+						"k-latisheva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Услуги",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "k-latisheva.xn--80ahdri7a.site/api/services",
+					"host": [
+						"k-latisheva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Регистрация пользователя",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "fio",
+							"value": "Аня",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "78999001",
+							"type": "text"
+						},
+						{
+							"key": "dateofbirth",
+							"value": "2001-01-01",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sos1@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "k-latisheva.xn--80ahdri7a.site/api/register",
+					"host": [
+						"k-latisheva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Авторизация",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sos1@mail.ru\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "k-latisheva.xn--80ahdri7a.site/api/login",
+					"host": [
+						"k-latisheva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление услуги",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "heMGidbza94SmGeW8TuXnVQas25lWxAi",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Serv_Name",
+							"value": "Японский маникюр",
+							"type": "text"
+						},
+						{
+							"key": "opisanie",
+							"value": "Массаж для ваших ручек",
+							"type": "text"
+						},
+						{
+							"key": "Serv_Price",
+							"value": "800",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/690-19.STD/Pictures/1585568806_japan-manicure.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "k-latisheva.xn--80ahdri7a.site/api/service",
+					"host": [
+						"k-latisheva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запись клиента",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "heMGidbza94SmGeW8TuXnVQas25lWxAi",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ID_Cl",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ID_Empl",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "ID_Serv",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "Visit_Date",
+							"value": "2023-01-01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "k-latisheva.xn--80ahdri7a.site/api/registration",
+					"host": [
+						"k-latisheva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление услуги",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "gao5l0tOTS-gFLwejOrSUxmZVVudLzVg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "k-latisheva.xn--80ahdri7a.site/api/service/15",
+					"host": [
+						"k-latisheva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"service",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление записи",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "NchgO8kRbwZLFKEGXbuqMzzB1eqJgU2l",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "k-latisheva.xn--80ahdri7a.site/api/register/2",
+					"host": [
+						"k-latisheva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"register",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Редактирование телефона",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "NchgO8kRbwZLFKEGXbuqMzzB1eqJgU2l",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone",
+							"value": "888888881",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "k-latisheva.xn--80ahdri7a.site/api/client",
+					"host": [
+						"k-latisheva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение администраторов",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "heMGidbza94SmGeW8TuXnVQas25lWxAi",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "k-latisheva.xn--80ahdri7a.site/api/cladmin",
+					"host": [
+						"k-latisheva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"cladmin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
